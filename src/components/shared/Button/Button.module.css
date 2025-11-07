@@ -1,0 +1,226 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 1.4px;
+  min-width: 150px;
+  min-height: 45px;
+  padding-top: 1px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid transparent;
+  font-family: var(--poppins);
+}
+
+.btn * {
+  color: currentColor;
+  background: transparent;
+  border: 0 !important;
+}
+
+.black {
+  background-color: var(--black);
+  color: var(--tan);
+  border: 1px solid var(--black);
+}
+
+.black:hover,
+.btn.black:hover,
+a.btn.black:hover {
+  background-color: var(--tan);
+  color: var(--brown);
+  border-color: var(--tan);
+}
+
+.tan {
+  background-color: var(--tan);
+  color: var(--darkBrown);
+  border-color: var(--tan);
+}
+
+.tan:hover,
+.btn.tan:hover,
+a.btn.tan:hover {
+  background-color: var(--brown);
+  color: var(--tan);
+  border-color: var(--brown);
+}
+
+.brown {
+  background-color: var(--brown);
+  border: 1px solid var(--brown);
+  color: var(--tan);
+  border-color: var(--brown);
+}
+
+.brown:hover,
+.btn.brown:hover,
+a.btn.brown:hover {
+  background-color: var(--tan);
+  color: var(--brown);
+}
+
+.tanBorder {
+  background: transparent;
+  color: var(--brown);
+  border: 1px solid var(--brown);
+}
+
+.tanBorder:hover,
+.btn.tanBorder:hover,
+a.btn.tanBorder:hover {
+  background-color: var(--brown);
+  color: var(--tan);
+  border-color: var(--brown);
+}
+
+.gold {
+  background: var(--gold);
+  color: var(--tan);
+  border: 1px solid var(--gold);
+}
+
+.gold:hover,
+.btn.gold:hover,
+a.btn.gold:hover {
+  background-color: transparent;
+  color: var(--gold);
+}
+
+.goldBorder {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.goldBorder:hover,
+.btn.goldBorder:hover,
+a.btn.goldBorder:hover {
+  background-color: var(--gold);
+  color: var(--tan);
+}
+
+.brownBorder {
+  background: transparent;
+  color: var(--darkBrown);
+  border: 1px solid var(--darkBrown);
+}
+
+.brownBorder:hover,
+.btn.brownBorder:hover,
+a.btn.brownBorder:hover {
+  background-color: var(--darkBrown);
+  color: var(--tan);
+}
+
+.darkBrown {
+  background: var(--darkBrown);
+  color: var(--tan);
+  border: 1px solid var(--darkBrown);
+}
+
+.darkBrown:hover,
+.btn.darkBrown:hover,
+a.btn.darkBrown:hover {
+  background-color: var(--tan);
+  color: var(--darkBrown);
+}
+
+.tanBorderii {
+  background: transparent;
+  color: var(--tan);
+  border: 1px solid var(--tan);
+}
+
+.tanBorderii:hover,
+.btn.tanBorderii:hover,
+a.btn.tanBorderii:hover {
+  background-color: var(--tan);
+  color: var(--brown);
+  border-color: var(--tan);
+}
+
+.noBorderBrown {
+  background: transparent;
+  color: var(--darkBrown);
+  padding: 0rem;
+}
+
+.text3dContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  line-height: 1;
+  perspective: 600px;
+}
+
+.wordBox {
+  display: inline-flex;
+}
+
+.space {
+  white-space: pre;
+}
+
+.charBox,
+.frontFace,
+.secondFace {
+  will-change: transform;
+}
+
+.charBox {
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+  line-height: 1lh;
+}
+
+.frontFace {
+  position: relative;
+  display: inline-block;
+  height: 1lh;
+  backface-visibility: hidden;
+  font-family: var(--poppins);
+  letter-spacing: 0.5px;
+}
+
+.secondFace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1lh;
+  backface-visibility: hidden;
+  font-family: var(--poppins);
+  letter-spacing: 0.5px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}

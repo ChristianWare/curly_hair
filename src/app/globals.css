@@ -1,33 +1,52 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --black: #313330;
+  --lightBlack: #2a2a2a;
+  --tan: #f2efe8;
+  --white: #fffdf9;
+  --brown: #b3a083;
+  --brownii: #dfd9cf;
+  --darkBrown: #474036;
+  --darkGray: #646464;
+  --darkGrayii: rgb(194, 192, 192);
+  --gold: #d09d02;
+  /* admin colors */
+  --border: #ffffff1c;
+  --badge_confirmed: #0a7;
+  --badge_pending: #d88a00;
+  --badge_completed: #0366d6;
+  --badge_canceled: #999;
+  --badge_noshow: #b33636;
+  --lightGray: #ecebeb;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 110%;
+  /* scroll-behavior: smooth;
+  scroll-margin-top: 40px;
+  */
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--poppins);
+  font-weight: 300;
+  overscroll-behavior: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 a {
@@ -35,8 +54,224 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: var(--darkBrown);
+  font-family: var(--inter);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: var(--inter);
+  line-height: 112%;
+  letter-spacing: -2.4px;
+  font-weight: 500;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+h2 {
+  font-size: 3.6rem;
+  letter-spacing: -1.4px;
+}
+
+h3 {
+  font-size: 2rem;
+
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+p,
+ul,
+input,
+textarea {
+  hyphens: auto;
+  font-size: 1.4rem;
+  line-height: 1.625em;
+  font-weight: 300;
+  hyphens: auto;
+  color: var(--black);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.stat {
+  font-size: 9rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.h3 {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.h4 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.h5 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.adminHeading {
+  color: var(--darkBrown);
+  font-size: 4rem;
+  font-family: var(--interTight);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* .toastFont {
+  font-family: var(--ABCSocialLight);
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+::selection {
+  background: var(--secondary);
+}
+::-moz-selection {
+  background: var(--secondary);
+} */
+
+/* ::selection {
+  background: var(--orange);
+  color: var(--black);
+}
+::-moz-selection {
+  background: var(--orange);
+  color: var(--black);
+} */
+
+@media screen and (max-width: 968px) {
   html {
-    color-scheme: dark;
+    font-size: 55%;
   }
+
+  .h2 {
+    /* font-size: 4rem;
+  } */
+
+    /* h1 {
+    font-size: 5rem;
+  } */
+
+    /* h2 {
+    font-size: 6rem;
+  } */
+
+    p {
+      font-size: 113.7%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 13vw;
+    }
+
+    .h1ii {
+      font-size: 5.1rem;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    h2,
+    .h2 {
+      font-size: 4.1rem;
+      /* letter-spacing: -1.4px; */
+      line-height: 1.2;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    html {
+      font-size: 50%;
+    }
+
+    .adminHeading {
+      font-size: 8vw;
+    }
+
+    /* h1 {
+    font-size: 8vw;
+  }
+
+  .h2 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+
+  .stat {
+    font-size: 7.5rem;
+  } */
+  }
+
+  /* .toastFont {
+} */
+
+  /* Only use in production */
+  /* @media screen and (max-width: 480px) {
+  h1 {
+    letter-spacing: -2.5px;
+  }
+  h2 {
+    letter-spacing: -1.5px;
+    line-height: 120%;
+  }
+} */
+
+  /* .toastFont {
+  font-family: var(--roboto);
+} */
 }
