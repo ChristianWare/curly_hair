@@ -1,0 +1,23 @@
+.container {
+  background-color: var(--white);
+  height: 100%;
+  padding: 3.2rem;
+}
+
+.navContainer {
+    margin-bottom: 6.5rem;
+}
+
+/* .content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 6.5rem;
+  height: 100%;
+} */
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2.4rem;
+  }
+}

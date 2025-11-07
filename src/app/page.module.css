@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: red;
+  border-right: 1px solid var(--badge_canceled);
 }
 
 .right {
