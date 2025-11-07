@@ -12,7 +12,9 @@ export default function FixedHeroIntro() {
           <h1 className={styles.heading}>Marketing that never gives up</h1>
           <div className={styles.btnContainer}></div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor, ex impedit ducimus autem vel consectetur accusantium suscipit rem voluptatibus, est officiis earum, numquam nemo. Asperiores omnis aliquid accusamus molestiae.
+        </div>
       </div>
     </section>
   );
