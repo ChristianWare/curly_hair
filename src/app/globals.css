@@ -3,6 +3,7 @@
   --lightBlack: #2a2a2a;
   --tan: #f2efe8;
   --white: #ffffff;
+  --gray: #D2D2D2;
   --brown: #b3a083;
   --brownii: #dfd9cf;
   --darkBrown: #474036;
@@ -14,8 +15,8 @@
   --green: #00a876;
   --pink: #e718c8;
   --purple: #8c0aff;
+  --border: #D6D6D6;
   /* admin colors */
-  --border: #ffffff1c;
   --badge_confirmed: #0a7;
   --badge_pending: #d88a00;
   --badge_completed: #0366d6;
