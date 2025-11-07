@@ -211,7 +211,7 @@ export default function Nav() {
 
   const items = useMemo(
     () => [
-      { text: "About", href: "/about" },
+      { text: "About", href: "/" },
       { text: "Services", href: "/" },
       { text: "Gallery", href: "/" },
       { text: "Contact", href: "/" },
@@ -226,12 +226,16 @@ export default function Nav() {
           <div className={styles.companyLogoContainer}>
             <CompanyLogo />
           </div>
-          <div className={styles.navItems}>
-            {items.map((item) => {
+          <div
+            className={
+              isOpen ? `${styles.navItems} ${styles.active}` : styles.navItems
+            }
+          >
+            {items.map((item, index) => {
               const active = isActive(item.href);
               return (
                 <NavLink3D
-                  key={item.href}
+                  key={index}
                   href={item.href}
                   className={`${styles.navItem} ${
                     active ? styles.navItemActive : ""
