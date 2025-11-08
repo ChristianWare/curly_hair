@@ -1,4 +1,3 @@
-// Button.tsx
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -10,6 +9,7 @@ import {
 } from "motion/react";
 import React, { ReactNode, useCallback, useMemo, useState } from "react";
 import Link from "next/link";
+import ChevronRight from "../icons/ChevronRight/ChevronRight";
 
 const splitIntoCharacters = (text: string): string[] => {
   if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
@@ -50,6 +50,7 @@ interface Props {
   type?: "button" | "submit" | "reset";
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
+  chevron?: boolean;
 }
 
 const staggerDuration = 0.015;
@@ -141,6 +142,7 @@ export default function Button({
   type = "button",
   leftIcon,
   rightIcon,
+  chevron,
 }: Props) {
   const content = text || children;
   const [isAnimating, setIsAnimating] = useState(false);
@@ -159,7 +161,7 @@ export default function Button({
       const randomIndex = Math.floor(Math.random() * total);
       return Math.abs(randomIndex - index) * staggerDuration;
     }
-    return Math.abs(staggerFrom - index) * staggerDuration;
+    return Math.abs((staggerFrom as number) - index) * staggerDuration;
   }, []);
 
   const handleHoverStart = useCallback(async () => {
@@ -189,17 +191,25 @@ export default function Button({
 
   const handleHoverEnd = useCallback(() => setIsHovering(false), []);
 
+  const rightAdornment =
+    rightIcon ??
+    (chevron ? (
+      <span className={styles.chevron} aria-hidden='true'>
+        <ChevronRight className={styles.ChevronRight} />
+      </span>
+    ) : null);
+
   const inner = (
     <>
       {leftIcon && (
-        <span className={styles.iconBox} aria-hidden='true'>
+        <span className={styles.leftIcon} aria-hidden='true'>
           {leftIcon}
         </span>
       )}
       <ButtonContent3D content={content} />
-      {rightIcon && (
-        <span className={styles.iconBox} aria-hidden='true'>
-          {rightIcon}
+      {rightAdornment && (
+        <span className={styles.rightIcon} aria-hidden='true'>
+          {rightAdornment}
         </span>
       )}
     </>

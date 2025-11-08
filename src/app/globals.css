@@ -1,9 +1,10 @@
 :root {
   --black: #000000;
+  --blackHover: #3a3a3a;
   --lightBlack: #2a2a2a;
   --tan: #f2efe8;
   --white: #ffffff;
-  --gray: #D2D2D2;
+  --gray: #d2d2d2;
   --brown: #b3a083;
   --brownii: #dfd9cf;
   --darkBrown: #474036;
@@ -15,7 +16,7 @@
   --green: #00a876;
   --pink: #e718c8;
   --purple: #8c0aff;
-  --border: #D6D6D6;
+  --border: #d6d6d6;
   /* admin colors */
   --badge_confirmed: #0a7;
   --badge_pending: #d88a00;
@@ -35,9 +36,9 @@
   scroll-margin-top: 40px;
   */
   -webkit-tap-highlight-color: transparent;
-  font-family: var(--poppins);
-  font-weight: 300;
-  overscroll-behavior: none;
+  font-family: var(--inter);
+  font-weight: 400;
+  /* overscroll-behavior: none; */
 }
 
 html {
@@ -115,7 +116,8 @@ textarea {
   hyphens: auto;
   font-size: 1.4rem;
   line-height: 1.625em;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: -0.3px;
   hyphens: auto;
   color: var(--black);
 }
